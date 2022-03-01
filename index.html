@@ -25,6 +25,7 @@
       <a href="#about" class="about">About</a>
       <a href="#events" class="events">Events</a>
       <a href="#contact" class="contact">Contact</a>
+
       <!-- login -->
       <button onclick="showModal()" class="login">Login</button>
       <div id="id01" class="modal">
@@ -33,22 +34,20 @@
         >
         <form action="" class="modal-content animate" method="post">
           <div class="container">
-            <label for="uname"><b>Username</b></label>
+            <label for="uname"><b>Username:</b></label>
             <input
               type="text"
-              placeholder="Enter Username"
+              placeholder="Enter Username...."
               name="uname"
               required
             />
-
-            <label for="psw"><b>Password</b></label>
+            <label for="psw"><b>Password:</b></label>
             <input
               type="password"
-              placeholder="Enter Password"
+              placeholder="Enter Password...."
               name="psw"
               required
             />
-
             <button type="submit">Login</button>
             <label>
               <input type="checkbox" checked="checked" name="remember" />
@@ -59,22 +58,20 @@
             <button type="button" onclick="hideModal()" class="cancelbtn">
               Cancel
             </button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+            <span class="psw">Forgot <a href="#">Password?</a></span>
           </div>
         </form>
       </div>
+
       <!-- sign up  -->
       <button class="sign-up">Sign Up</button>
+
       <!-- bars  -->
       <a href="javascript:void(0);" class="icon" id="icon" onclick="navbar()">
         <i class="fa fa-bars"></i
       ></a>
     </nav>
 
-
-
-
-    
     <script src="./scripts/main.js"></script>
   </body>
 </html>
