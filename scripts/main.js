@@ -12,6 +12,9 @@ let sign = document.getElementById("sign-up");
 let closeIcon = document.getElementById("close-icon-su");
 let cancelBtn2 = document.getElementById("cancelbtn-2");
 
+// Banner Var
+const bannerH1 = document.getElementById("banner-header");
+
 // topnav function
 function navbar() {
   let x = navVar;
@@ -25,17 +28,27 @@ function navbar() {
 //login function
 function showModal() {
   modalLogin.style.display = "block";
-};
+}
 function hideModal() {
   modalLogin.style.display = "none";
-};
+}
 
 // sign up function
 function showModalSu() {
   modalSign.style.display = "block";
-};
+}
 function hideModalSu() {
   modalSign.style.display = "none";
+}
+
+// Banner Function
+const randomColor = () => {
+  let value = Math.floor(Math.random() * 16777215).toString(16);
+  return `#${value}`;
+};
+const bannerEvent = () => {
+  bannerH1.style.cursor = "pointer";
+  bannerH1.style.color = randomColor();
 };
 
 // topnav events
@@ -59,4 +72,10 @@ window.addEventListener("click", function (event) {
   if (event.target == modalSign) {
     modalSign.style.display = "none";
   }
+});
+
+// Banner Events
+bannerH1.addEventListener("mouseover", bannerEvent);
+bannerH1.addEventListener("mouseout", function (event) {
+  event.target.style.color = "";
 });

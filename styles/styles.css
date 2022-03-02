@@ -236,3 +236,38 @@ input[type="password"] {
     width: 100%;
   }
 }
+
+
+/* Header  */
+/* Banner  */
+.banner {
+  background-image: url("./images/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow:inset 0 0 0 2000px rgba(13, 27, 42, 0.842);
+  display: flex;
+  width: 100%;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.banner-content {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.banner-content h1 {
+  letter-spacing: 1rem;
+  padding: 10px;
+  color: #fff;
+}
+
+.banner-content p {
+  font-weight: 400;
+  font-style: italic;
+}
