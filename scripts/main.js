@@ -11,18 +11,28 @@ function navbar() {
 }
 
 // login
-let modal = document.getElementById("id01");
+let modalLogin = document.getElementById("id01");
 
-const showModal = () => {
-  modal.style.display = "block";
-};
+let login = document.getElementById("login");
 
-const hideModal = () => {
-  modal.style.display = "none";
-};
+function showModal() {
+  modalLogin.style.display = "block";
+}
+
+function hideModal() {
+  modalLogin.style.display = "none";
+}
+
+login.addEventListener("click", showModal);
+
+document.getElementById("close-icon").addEventListener("click", hideModal);
+
+document.getElementById("cancelbtn").addEventListener("click", hideModal);
 
 window.addEventListener("click", function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == modalLogin) {
+    modalLogin.style.display = "none";
   }
 });
+
+// Sign Up

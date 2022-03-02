@@ -27,11 +27,9 @@
       <a href="#contact" class="contact">Contact</a>
 
       <!-- login -->
-      <button onclick="showModal()" class="login">Login</button>
+      <button class="login" id="login">Login</button>
       <div id="id01" class="modal">
-        <span onclick="hideModal()" class="close" title="Close Modal"
-          >&times;</span
-        >
+        <span class="close" title="Close Modal" id="close-icon">&times;</span>
         <form action="" class="modal-content animate" method="post">
           <div class="container">
             <label for="uname"><b>Username:</b></label>
@@ -55,7 +53,7 @@
             </label>
           </div>
           <div class="container" style="background-color: #f1f1f1">
-            <button type="button" onclick="hideModal()" class="cancelbtn">
+            <button type="button" id="cancelbtn" class="cancelbtn">
               Cancel
             </button>
             <span class="psw">Forgot <a href="#">Password?</a></span>
