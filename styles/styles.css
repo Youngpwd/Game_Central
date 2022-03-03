@@ -74,15 +74,45 @@ body {
   opacity: 0.8;
 }
 
-.cancelbtn {
-  width: auto;
+#cancelbtn {
+  width: 40%;
   padding: 10px 18px;
   background-color: #f44336;
+  flex-grow: 1;
+  margin-right: 5px;
 }
 
 .container {
   padding: 16px;
   text-align: center;
+}
+
+#container-bottom {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.clearfix {
+  display: flex;
+  flex-flow: column-reverse wrap;
+  align-content: center;
+}
+
+#cancelbtn-2 {
+  background-color: red;
+  flex-grow: 1;
+  flex-shrink: 2;
+  width: 40%;
+  padding: 10px 18px;
+}
+.clearfix #submit-form {
+  background-color: #1b263b;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-bottom: 20px;
+  width: 40%;
+  padding: 10px 18px;
 }
 
 span.psw {
@@ -96,6 +126,7 @@ span.psw a {
   text-decoration: underline;
   padding: 0;
   margin-left: 5px;
+  color: dodgerblue;
 }
 
 span.psw a:hover {
@@ -187,72 +218,6 @@ input[type="password"] {
   }
 }
 
-/* media query  topnav  */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:nth-child(2)) {
-    display: none;
-  }
-  .topnav button {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-  .topnav img {
-    display: none;
-  }
-  .topnav .terms,
-  .topnav .terms a {
-    font-size: 0.75rem;
-  }
-}
-/* Add Responsive Class function */
-@media screen and (max-width: 600px) {
-  .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: #e0e1dd;
-    color: #000;
-  }
-  .topnav.responsive a,
-  .topnav.responsive button {
-    float: none;
-    display: block;
-    text-align: center;
-  }
-  .topnav.responsive button {
-    width: 100%;
-    margin: 0;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .modal-content {
-    width: 100%;
-  }
-}
-
-@media  screen and (max-width: 350px) {
-  .topnav {
-    width: 350px;
-  }
-}
-
 /* Header  */
 /* Banner  */
 .banner {
@@ -289,8 +254,36 @@ input[type="password"] {
   font-style: italic;
 }
 
-/* Banner media query */
+/* ------------Media Queries---------------- */
+@media screen and (min-width: 600px) and (max-width: 678px) {
+  #sign-up,
+  #login {
+    padding: 19px 10px;
+    font-size: 10px;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  .topnav a:not(:nth-child(2)) {
+    display: none;
+  }
+  .topnav button {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav img {
+    display: none;
+  }
+  .topnav .terms,
+  .topnav .terms a {
+    font-size: 0.75rem;
+  }
+  .modal-content {
+    width: 100%;
+  }
   .banner {
     height: auto;
     top: 0;
@@ -305,8 +298,49 @@ input[type="password"] {
   }
 }
 
-@media  screen and (max-width: 350px) {
+@media screen and (max-width: 350px) {
+  .topnav {
+    width: 360px;
+  }
+  .topnav .terms,
+  .topnav .terms a {
+    font-size: 0.65rem;
+  }
   .banner {
-    width: 350px;
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* Add Responsive Class for navBar function */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #e0e1dd;
+    color: #000;
+  }
+  .topnav.responsive a,
+  .topnav.responsive button {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  .topnav.responsive button {
+    width: 100%;
+    margin: 0;
   }
 }
