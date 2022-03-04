@@ -32,6 +32,8 @@ const imgBoxFive = document.getElementById("box-5");
 const imgBoxSix = document.getElementById("box-6");
 const imgBoxSeven = document.getElementById("box-7");
 const imgBoxEight = document.getElementById("box-8");
+
+// Galley image Arrays
 const imgBoxArr = [
   imgBoxOne,
   imgBoxTwo,
@@ -178,6 +180,7 @@ bannerH1.addEventListener("mouseout", function (event) {
 
 // Gallery Events
 imgBoxArr[0].addEventListener("click", imageSelectOne);
+imgBoxArr[0].addEventListener("click", imageSelectOne);
 imgBoxArr[1].addEventListener("click", imageSelectTwo);
 imgBoxArr[2].addEventListener("click", imageSelectThree);
 imgBoxArr[3].addEventListener("click", imageSelectFour);
@@ -185,3 +188,11 @@ imgBoxArr[4].addEventListener("click", imageSelectFive);
 imgBoxArr[5].addEventListener("click", imageSelectSix);
 imgBoxArr[6].addEventListener("click", imageSelectSeven);
 imgBoxArr[7].addEventListener("click", imageSelectEight);
+
+for (let i = 0; i < imgBoxArr.length; i++) {
+  imgBoxArr[i].addEventListener("mouseout", function () {
+    for (let j = 0; j < imgInfoArr.length; j++) {
+      imgInfoArr[j].style.display = "none";
+    }
+  });
+}
