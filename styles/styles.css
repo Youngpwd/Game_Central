@@ -76,10 +76,14 @@ body {
   opacity: 0.8;
 }
 
+#form-login {
+  background-color: #1b263b;
+}
+
 #cancelbtn {
   width: 40%;
   padding: 10px 18px;
-  background-color: #f44336;
+  background-color: red;
   flex-grow: 1;
   margin-right: 5px;
 }
