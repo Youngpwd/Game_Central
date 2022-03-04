@@ -6,12 +6,12 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   margin: auto;
-  background-color: #778da959;
+  background-color: #778da91a;
 }
 
 /* TopNav */
 .topnav {
-  background-color: #0d1b2a;
+  background-color: #0d1b2ade;
   position: fixed;
   overflow: hidden;
   z-index: 5;
@@ -275,16 +275,12 @@ header {
 /* ----About---- */
 .about-section {
   display: grid;
-  grid-template-areas:
-    "two two two"
-    "one one img"
-    "three three three";
-  gap: 10px;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-row: 1fr 1fr 70%;
+  gap: 20px;
   width: 98%;
   height: auto;
   margin: 0 auto;
-  align-items: center;
-  justify-items: center;
 }
 
 .box {
@@ -293,43 +289,80 @@ header {
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding: 40px;
+  padding: 10px;
   color: #fff;
+  height: auto;
+  text-align: justify;
 }
 
 .box p {
-  line-height: 1.8;
+  line-height: 2;
+  padding: 20px;
 }
 
 .one {
-  grid-area: one;
   background-color: #415a77;
-  border: 4px solid #0d1b2a;
+  border: 2px solid #0d1b2a;
+  grid-area: 2 / 1 / 3 / 3;
 }
 
 .two {
-  grid-area: two;
   background-color: #0d1b2a;
-  border: 4px solid #fff;
+  border: 2px solid #fff;
+  grid-area: 1 / 1 / 2 /  4;
 }
 
 .three {
-  grid-area: three;
   background-color: #1b263b;
+  border: 2px solid #fff;
+  height: auto;
+  grid-area: 3 / 1 / 4 / 4;
+}
+
+#gallery {
+  justify-content: flex-start;
 }
 
 .img-container {
-  grid-area: img;
-  width: 400px;
+  width: 300px;
   height: auto;
   overflow: hidden;
-  border: 3px solid #0d1b2a;
+  border: 2px solid #0d1b2a;
+  grid-area: 2 / 3 / 3 / 4;
+  display: flex;
+  justify-self: center;
 }
 
 .img-container img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50% 50%;
+  height: auto;
+  width: 90%;
+  gap: 10px; 
+  justify-items: center;
+  align-items: center;
+}
+
+.img-grid-box {
+  width: 95%;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #fff;
+  display: flex;
+}
+
+.img-grid-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  flex-grow: 1;
 }
 
 /* ------------Media Queries---------------- */
