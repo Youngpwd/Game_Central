@@ -14,7 +14,7 @@ body {
   background-color: #0d1b2ade;
   position: fixed;
   overflow: hidden;
-  z-index: 5;
+  z-index: 1;
   width: 100%;
   border-bottom: 1px solid #0d1b2a;
 }
@@ -384,6 +384,27 @@ header {
 }
 
 /* ------------Media Queries---------------- */
+@media screen and (max-width: 700px) {
+  .img-container {
+    display: none;
+  }
+  .one {
+    grid-area: 2 / 1 / 3 / 4;
+  }
+  .header-info {
+    font-size: 0.75rem;
+    width: 90%;
+    text-align: justify;
+  }
+  .header-info h3 {
+    padding: 0px 20px;
+  }
+  .img-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
 @media screen and (min-width: 600px) and (max-width: 700px) {
   #sign-up,
   #login {
@@ -426,6 +447,15 @@ header {
   header {
     margin-bottom: 5px;
   }
+  .img-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    width: 100%;
+    height: auto;
+  }
+  .img-grid-box {
+    height: 500px;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -435,6 +465,21 @@ header {
   .header-info {
     text-align: justify;
     padding: 5px;
+    font-size: 0.75rem;
+    width: auto;
+  }
+  .box p {
+    font-size: 0.75rem;
+  }
+  .header-info h3 {
+    font-weight: normal;
+  }
+  .img-grid-box {
+    height: 350px;
+  }
+  .about-section {
+    width: 100%;
+    margin: auto;
   }
 }
 
@@ -447,6 +492,13 @@ header {
   .topnav,
   header {
     width: 360px;
+  }
+  .about-section .box {
+    width: 90%;
+    /* padding: 0 1.5px; */
+  }
+  html {
+    width: fit-content;
   }
 }
 
@@ -463,7 +515,7 @@ header {
 /* Add Responsive Class for navBar function */
 @media screen and (max-width: 600px) {
   .topnav.responsive {
-    position: relative;
+    position: fixed;
   }
   .topnav.responsive a.icon {
     position: absolute;
@@ -481,5 +533,9 @@ header {
   .topnav.responsive button {
     width: 100%;
     margin: 0;
+  }
+  .topnav.responsive .login,
+  .topnav.responsive .sign-up {
+    background-color: #0d1b2a3b;
   }
 }
