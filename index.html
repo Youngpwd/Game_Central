@@ -171,8 +171,8 @@
           veniam iure!
         </p>
       </div>
-      <div class="box three" id="gallery">
-        <h2>Gallery</h2>
+      <div class="box three" id="events">
+        <h2>Events</h2>
         <span>(click image for info)</span>
         <div class="img-grid">
           <div class="img-grid-box" id="box-1">
@@ -235,11 +235,60 @@
       </div>
     </section>
 
-    <!-- Events  -->
-    <section id="events">
-      <h2>Calender</h2>
-    </section>
-
+    <!-- contact  -->
+    <footer>
+      <div class="container">
+        <div style="text-align: center">
+          <h2>Contact Us</h2>
+          <p>Give us a call, stop by, or leave us a message here below.</p>
+          <p>(999) 999-9999</p>
+        </div>
+        <div class="row">
+          <div class="column" id="col-1">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2690.8816657644074!2d-122.64067298417956!3d47.589543697149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549039e24a487ce3%3A0xb1444b2544315b0b!2s620%20Sheridan%20Rd%2C%20Bremerton%2C%20WA%2098310!5e0!3m2!1sen!2sus!4v1646667879396!5m2!1sen!2sus"
+              width="500"
+              height="450"
+              style="border: 0"
+              allowfullscreen="true"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="column">
+            <form action="" method="post">
+              <label for="fname">First Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your name..."
+              />
+              <label for="lname">Last Name</label>
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Your last name..."
+              />
+              <label for="country">Country</label>
+              <select name="country" id="country">
+                <option value="canada">Canada</option>
+                <option value="mexico">Mexico</option>
+                <option value="usa">USA</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea
+                name="subject"
+                id="subject"
+                placeholder="Write something.."
+                style="height: 170px"
+              ></textarea>
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./scripts/main.js"></script>
   </body>
 </html>
